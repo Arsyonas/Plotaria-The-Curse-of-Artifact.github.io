@@ -91,3 +91,7 @@ footer {
   border-radius: 12px;
   margin-bottom: 2rem;
 }
+
+audio {
+  display: none; /* supaya gak muncul control default */
+}
