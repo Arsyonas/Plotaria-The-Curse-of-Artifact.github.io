@@ -111,19 +111,39 @@ audio {
   }
 }
 
-button {
+/* 🎬 Cover screen styling */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro-content h1 {
+  color: #f9d67a;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px #000;
+  font-family: 'MedievalSharp', cursive;
+}
+
+#startBtn {
   background-color: #8e6f3e;
   color: #fff;
   font-family: 'MedievalSharp', cursive;
-  padding: 0.7rem 1.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1rem;
-  margin: 1rem auto;
-  display: block;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px #000;
+  transition: background 0.3s ease;
 }
 
-button:hover {
+#startBtn:hover {
   background-color: #a88447;
 }

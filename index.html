@@ -8,6 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- 🎬 COVER INTRO SCREEN -->
+  <div id="intro-screen">
+    <div class="intro-content">
+      <h1>Your journey starts here</h1>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- 🔊 BGM -->
+  <audio id="bgm" loop>
+    <source src="audio/bgm.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🌟 MAIN WEBSITE CONTENT -->
   <header>
     <h1>Plotaria: The Curse of Artifact</h1>
     <p>Make your fantasy world come true</p>
@@ -35,26 +51,30 @@
     </div>
   </section>
 
-  <audio id="bgm" autoplay loop>
-  <source src="audio/bgm.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
-  <button onclick="document.getElementById('bgm').play()">🎵 Play Music</button>
-
-
   <section id="download">
-  <h2>Download Demo</h2>
-  <p>Try the free demo and experience the adventure!</p>
-  <div class="download-buttons">
-    <a href="https://drive.usercontent.google.com/download?id=1IvJ8N07Ubvo5a62PM3HKiMevHivboEg9&export=download&authuser=0" class="download-button" target="_blank"> Download for PC</a>
-    <a href="https://drive.usercontent.google.com/download?id=1sBN9WM96Inx0RoUMtQRjqgZYZyYdYzdc&export=download&authuser=0" class="download-button" target="_blank"> Download for Android</a>
-  </div>
-</section>
-
-
+    <h2>Download Demo</h2>
+    <p>Try the free demo and experience the adventure!</p>
+    <div class="download-buttons">
+      <a href="https://drive.usercontent.google.com/download?id=1IvJ8N07Ubvo5a62PM3HKiMevHivboEg9&export=download&authuser=0" class="download-button" target="_blank">🖥 Download for PC</a>
+      <a href="https://drive.usercontent.google.com/download?id=1sBN9WM96Inx0RoUMtQRjqgZYZyYdYzdc&export=download&authuser=0" class="download-button" target="_blank">📱 Download for Android</a>
+    </div>
   </section>
+
   <footer>
     <p>&copy; 2025 WeTry Indonesia</p>
   </footer>
+
+  <!-- 🎯 JS INTERACTION -->
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const introScreen = document.getElementById('intro-screen');
+    const bgm = document.getElementById('bgm');
+
+    startBtn.addEventListener('click', () => {
+      introScreen.style.display = 'none';
+      bgm.play();
+    });
+  </script>
+
 </body>
 </html>
