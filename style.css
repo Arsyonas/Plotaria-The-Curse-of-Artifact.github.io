@@ -9,6 +9,15 @@ html, body {
   background-color: #1a1a1a;
 }
 
+header, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
 /* Container layout */
 main, header, footer, section {
   background-color: rgba(0, 0, 0, 0.7);
