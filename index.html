@@ -11,13 +11,14 @@
 
   <!-- INTRO COVER SCREEN -->
   <div id="intro-screen">
-    <div class="cover-top"></div>
-    <div class="cover-bottom"></div>
-    <div class="cover-center">
-      <h1>Your journey starts here</h1>
-      <button id="startBtn">Start</button>
-    </div>
+  <div class="cover-top"></div>
+  <div class="cover-bottom"></div>
+  <div class="cover-center">
+    <h1>Your journey starts here</h1>
+    <button id="startBtn">Start</button>
   </div>
+</div>
+
 
   <!-- BACKGROUND MUSIC -->
   <audio id="bgm" loop>
@@ -58,15 +59,16 @@
   <p>Try the free demo and experience the adventure!</p>
   <div class="download-buttons">
     <a href="https://drive.usercontent.google.com/download?id=1IvJ8N07Ubvo5a62PM3HKiMevHivboEg9&export=download&authuser=0" class="download-button" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/windows.svg" alt="Windows" class="icon" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Windows_logo_-_2021.svg" alt="Windows" class="emoji-icon" />
       Download for PC
     </a>
     <a href="https://drive.usercontent.google.com/download?id=1sBN9WM96Inx0RoUMtQRjqgZYZyYdYzdc&export=download&authuser=0" class="download-button" target="_blank">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/android.svg" alt="Android" class="icon" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" class="emoji-icon" />
       Download for Android
     </a>
   </div>
 </section>
+
 
 
   <footer>
@@ -74,19 +76,19 @@
   </footer>
 
   <!-- JS UNLOCK -->
-  <script>
-    const startBtn = document.getElementById('startBtn');
-    const intro = document.getElementById('intro-screen');
-    const bgm = document.getElementById('bgm');
+ <script>
+  const startBtn = document.getElementById('startBtn');
+  const intro = document.getElementById('intro-screen');
+  const bgm = document.getElementById('bgm');
 
-    startBtn.addEventListener('click', () => {
-      intro.classList.add('unlock');
-      setTimeout(() => {
-        intro.style.display = 'none';
-        bgm.play();
-      }, 1200); // pas efek selesai
-    });
-  </script>
+  startBtn.addEventListener('click', () => {
+    intro.classList.add('unlock');
+    bgm.play().catch(() => console.warn("Autoplay error"));
 
+    setTimeout(() => {
+      intro.style.display = 'none';
+    }, 1700); // delay > 1.2s animasi
+  });
+</script>
 </body>
 </html>

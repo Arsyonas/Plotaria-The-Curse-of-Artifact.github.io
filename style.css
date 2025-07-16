@@ -83,15 +83,16 @@ h2 {
   margin-top: 1rem;
 }
 
-.download-button .icon {
-  width: 24px;
-  height: 24px;
-  filter: invert(1); /* biar putih di dark bg */
-}
-
 .download-button:hover {
   background-color: #a88447;
 }
+
+.download-button .emoji-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+}
+
 
 
 audio {
@@ -170,6 +171,7 @@ audio {
 }
 
 .cover-center {
+  transition: opacity 0.4s ease;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -219,6 +221,7 @@ audio {
 #intro-screen.unlock {
   animation: fadeOut 0.5s ease-in-out 1.2s forwards;
 }
+
 
 @keyframes fadeOut {
   to {
