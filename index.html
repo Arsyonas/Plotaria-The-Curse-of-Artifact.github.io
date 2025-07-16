@@ -9,24 +9,23 @@
 </head>
 <body>
 
-  <!-- 🧱 INTRO SCREEN -->
-<div id="intro-screen">
-  <div class="intro-top"></div>
-  <div class="intro-bottom"></div>
-  <div class="intro-center">
-    <h1>Your journey starts here</h1>
-    <button id="startBtn">Start</button>
+  <!-- INTRO COVER SCREEN -->
+  <div id="intro-screen">
+    <div class="cover-top"></div>
+    <div class="cover-bottom"></div>
+    <div class="cover-center">
+      <h1>Your journey starts here</h1>
+      <button id="startBtn">Start</button>
+    </div>
   </div>
-</div>
 
-
-  <!-- 🔊 BGM -->
+  <!-- BACKGROUND MUSIC -->
   <audio id="bgm" loop>
     <source src="audio/bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- 🌟 MAIN WEBSITE CONTENT -->
+  <!-- MAIN WEBSITE CONTENT -->
   <header>
     <h1>Plotaria: The Curse of Artifact</h1>
     <p>Make your fantasy world come true</p>
@@ -67,21 +66,20 @@
     <p>&copy; 2025 WeTry Indonesia</p>
   </footer>
 
+  <!-- JS UNLOCK -->
   <script>
-  const startBtn = document.getElementById('startBtn');
-  const introScreen = document.getElementById('intro-screen');
-  const bgm = document.getElementById('bgm');
+    const startBtn = document.getElementById('startBtn');
+    const intro = document.getElementById('intro-screen');
+    const bgm = document.getElementById('bgm');
 
-  startBtn.addEventListener('click', () => {
-    introScreen.classList.add('unlock');
-    bgm.play();
-    
-    // Delay 1s lalu sembunyikan elemen cover
-    setTimeout(() => {
-      introScreen.style.display = 'none';
-    }, 1000);
-  });
-</script>
+    startBtn.addEventListener('click', () => {
+      intro.classList.add('unlock');
+      setTimeout(() => {
+        intro.style.display = 'none';
+        bgm.play();
+      }, 1200); // pas efek selesai
+    });
+  </script>
 
 </body>
 </html>

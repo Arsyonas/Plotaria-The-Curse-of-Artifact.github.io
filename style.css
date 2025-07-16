@@ -144,36 +144,36 @@ audio {
   transition: background 0.3s ease;
 }
 
-/* 🎬 Cover split screen cinematic effect */
+/* 🧙‍♂️ Intro cinematic screen */
 #intro-screen {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  pointer-events: auto;
   overflow: hidden;
+  font-family: 'MedievalSharp', cursive;
 }
 
-.intro-top,
-.intro-bottom {
+.cover-top,
+.cover-bottom {
   position: absolute;
   width: 100%;
   height: 50%;
-  background-color: #000;
-  transition: transform 1s ease-in-out;
+  background: #000;
+  transition: transform 1.2s ease-in-out;
   z-index: 1;
 }
 
-.intro-top {
+.cover-top {
   top: 0;
   transform: translateY(0);
 }
 
-.intro-bottom {
+.cover-bottom {
   bottom: 0;
   transform: translateY(0);
 }
 
-.intro-center {
+.cover-center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -182,42 +182,40 @@ audio {
   text-align: center;
 }
 
-.intro-center h1 {
+.cover-center h1 {
   color: #f9d67a;
   font-size: 3rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px #000;
-  font-family: 'MedievalSharp', cursive;
 }
 
-#startBtn {
+.cover-center button {
   background-color: #8e6f3e;
   color: #fff;
   font-family: 'MedievalSharp', cursive;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
   font-size: 1.2rem;
   box-shadow: 0 0 10px #000;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
-#startBtn:hover {
+.cover-center button:hover {
   background-color: #a88447;
 }
 
-/* 👇 Class buat animasi keluar */
-.unlock .intro-top {
+/* 🎬 Unlock animation */
+.unlock .cover-top {
   transform: translateY(-100%);
 }
 
-.unlock .intro-bottom {
+.unlock .cover-bottom {
   transform: translateY(100%);
 }
 
-.unlock .intro-center {
+.unlock .cover-center {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
 }
-
