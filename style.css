@@ -68,7 +68,9 @@ h2 {
 }
 
 .download-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
   background-color: #8e6f3e;
   color: #fff;
@@ -81,19 +83,16 @@ h2 {
   margin-top: 1rem;
 }
 
+.download-button .icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* biar putih di dark bg */
+}
+
 .download-button:hover {
   background-color: #a88447;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #aaa;
-  font-size: 0.9rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-}
 
 audio {
   display: none; /* supaya gak muncul control default */
