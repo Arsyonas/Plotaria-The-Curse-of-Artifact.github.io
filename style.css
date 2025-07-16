@@ -1,18 +1,21 @@
-/* RPG fantasy vibes style */
+/* RPG fantasy vibes + Steam-style side background */
 body {
   margin: 0;
   padding: 0;
   font-family: 'MedievalSharp', cursive;
-  background: url('assets/bg-scroll.png') repeat;
+  background: url('assets/bg-scroll.png') center center fixed no-repeat;
+  background-size: cover;
   color: #f5f0e1;
   background-color: #1a1a1a;
 }
 
-header {
-  background-color: #2c1a1a;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 4px solid #8e6f3e;
+main, header, footer, section {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
 }
 
 header h1 {
@@ -30,6 +33,7 @@ header p {
 
 nav {
   margin-top: 1rem;
+  text-align: center;
 }
 
 nav a {
@@ -39,16 +43,11 @@ nav a {
   font-weight: bold;
 }
 
-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
 h2 {
   color: #f9d67a;
   border-bottom: 2px solid #8e6f3e;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .gallery {
@@ -76,6 +75,7 @@ h2 {
   border-radius: 10px;
   box-shadow: 2px 2px 8px #000;
   transition: background 0.3s ease;
+  margin-top: 1rem;
 }
 
 .download-button:hover {
@@ -85,7 +85,9 @@ h2 {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #2c1a1a;
+  background-color: rgba(0, 0, 0, 0.7);
   color: #aaa;
   font-size: 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
 }
