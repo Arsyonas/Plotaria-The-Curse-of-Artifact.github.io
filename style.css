@@ -209,6 +209,33 @@ footer p {
   animation: fadeOut 0.5s ease-in-out 1.2s forwards;
 }
 
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #f9d67a;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+
 @keyframes fadeOut {
   to {
     opacity: 0;
