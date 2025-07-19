@@ -9,11 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <button id="muteBtn" onclick="toggleMute()">
-  🔊
-</button>
-
-
+  
   <!-- INTRO COVER SCREEN -->
   <div id="intro-screen">
     <div class="cover-top"></div>
@@ -28,6 +24,8 @@
   <audio id="bgm" loop>
     <source src="audio/bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
+    <button id="muteBtn" onclick="toggleMute()">🔊</button>
+  </button>
   </audio>
 
   <!-- MAIN CONTENT -->
@@ -89,11 +87,13 @@
     const intro = document.getElementById('intro-screen');
     const bgm = document.getElementById('bgm');
     const bgMusic = document.getElementById("bgMusic");
-    const muteBtn = document.getElementById("muteBtn");
+  const muteBtn = document.getElementById("muteBtn");
 
-    function toggleMute() {
-    bgMusic.muted = !bgMusic.muted;
-    muteBtn.textContent = bgMusic.muted ? "🔇" : "🔊";
+  function toggleMute() {
+    if (bgMusic) {
+      bgMusic.muted = !bgMusic.muted;
+      muteBtn.textContent = bgMusic.muted ? "🔇" : "🔊";
+    }
   }
 
     startBtn.addEventListener('click', () => {
