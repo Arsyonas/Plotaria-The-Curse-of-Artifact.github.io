@@ -24,9 +24,9 @@
   <audio id="bgm" loop>
     <source src="audio/bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-    <button id="muteBtn" onclick="toggleMute()">🔊</button>
-  </button>
   </audio>
+  <!-- MUTE BUTTON -->
+<button id="muteBtn" onclick="toggleMute()">🔊</button>
 
   <!-- MAIN CONTENT -->
   <header>
@@ -84,26 +84,25 @@
   <!-- JS UNLOCK -->
   <script>
     const startBtn = document.getElementById('startBtn');
-    const intro = document.getElementById('intro-screen');
-    const bgm = document.getElementById('bgm');
-    const bgMusic = document.getElementById("bgMusic");
-  const muteBtn = document.getElementById("muteBtn");
+const intro = document.getElementById('intro-screen');
+const bgMusic = document.getElementById("bgm");
+const muteBtn = document.getElementById("muteBtn");
 
-  function toggleMute() {
-    if (bgMusic) {
-      bgMusic.muted = !bgMusic.muted;
-      muteBtn.textContent = bgMusic.muted ? "🔇" : "🔊";
-    }
+function toggleMute() {
+  if (bgMusic) {
+    bgMusic.muted = !bgMusic.muted;
+    muteBtn.textContent = bgMusic.muted ? "🔇" : "🔊";
   }
+}
 
-    startBtn.addEventListener('click', () => {
-      intro.classList.add('unlock');
-      bgm.play().catch(() => console.warn("Autoplay error"));
+startBtn.addEventListener('click', () => {
+  intro.classList.add('unlock');
+  bgMusic.play().catch(() => console.warn("Autoplay blocked"));
 
-      setTimeout(() => {
-        intro.style.display = 'none';
-      }, 1700);
-    });
+  setTimeout(() => {
+    intro.style.display = 'none';
+  }, 1700);
+});
   </script>
 </body>
 </html>
